@@ -1,5 +1,19 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { publicRoutes } from "./routes";
+
 function App() {
-    return <div className="__havanduoc">App</div>;
+    return (
+        <Router>
+            <div className="__havanduoc">
+                <Routes>
+                    {publicRoutes.map((route) => {
+                        const Page = route.component;
+                        return <Route path={route.path} element={<Page />} />;
+                    })}
+                </Routes>
+            </div>
+        </Router>
+    );
 }
 
 export default App;
