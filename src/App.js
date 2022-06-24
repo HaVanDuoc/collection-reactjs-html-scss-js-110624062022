@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { DefaultLayout } from "./components/Layouts";
 import { publicRoutes } from "./routes";
 
 function App() {
@@ -6,9 +7,20 @@ function App() {
         <Router>
             <div className="__havanduoc">
                 <Routes>
-                    {publicRoutes.map((route) => {
+                    {publicRoutes.map((route, index) => {
+                        let Layout = DefaultLayout;
                         const Page = route.component;
-                        return <Route path={route.path} element={<Page />} />;
+                        return (
+                            <Route
+                                key={index}
+                                path={route.path}
+                                element={
+                                    <Layout>
+                                        <Page />
+                                    </Layout>
+                                }
+                            />
+                        );
                     })}
                 </Routes>
             </div>
