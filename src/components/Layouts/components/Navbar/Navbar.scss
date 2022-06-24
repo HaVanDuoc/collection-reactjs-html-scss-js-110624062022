@@ -1,0 +1,129 @@
+:root {
+    --navbar-height: 3rem;
+    --navbar-background-color: #fff;
+}
+
+#hvd-navbar {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    line-height: var(--navbar-height);
+    padding: calc(0.8rem + .5vw) calc(2rem + 2vw);
+    background-color: var(--navbar-background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+
+    .hvd-logo {
+        font-size: calc(1.5rem + 0.5vw);
+        font-weight: 500;
+        margin-right: 20px;
+        color: var(--main-color);
+        cursor: pointer;
+    }
+
+    .hvd-search {
+        position: relative;
+        width: 40vw;
+        height: var(--navbar-height);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+
+        i.icon-search {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        i {
+            width: var(--navbar-height);
+            height: var(--navbar-height);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--main-color);
+        }
+
+        input {
+            height: 100%;
+            width: 100%;
+            font-size: 1rem;
+            border: 1px solid var(--font-color);
+            border-radius: calc(var(--navbar-height) + 0.5vw);
+            padding: 0 calc(var(--navbar-height) + 0.5vw) 0 calc(var(--navbar-height));
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            outline: none;
+
+            &:focus {
+                color: var(--main-color);
+                border: 1px solid var(--main-color);
+                box-shadow: 0 1px 1px var(--main-color);
+                color: var(--font-color);
+                transition: all .3s ease;
+            }
+        }
+
+        .auto-complete.active {
+            position: absolute;
+            top: calc(var(--navbar-height) + 20px);
+            left: 0;
+            background-color: var(--navbar-background-color);
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--main-color);
+            border-radius: calc(25px);
+            box-shadow: 0 0px 3px var(--main-color);
+            z-index: 999;
+            display: block;
+
+
+            .item {
+                display: flex;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: var(--hover-color);
+                }
+
+                .info {
+                    flex: 1;
+                }
+            }
+        }
+
+        .auto-complete {
+            display: none;
+        }
+    }
+
+    .hvd-rightnav {
+        display: flex;
+
+        .item {
+            height: var(--navbar-height);
+            width: var(--navbar-height);
+            // border-bottom: 5px solid var(--main-color);
+            // margin-left: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--font-color);
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--hover-color);
+                color: var(--main-color);
+                transition: all .3s ease;
+
+            }
+        }
+
+
+    }
+}
