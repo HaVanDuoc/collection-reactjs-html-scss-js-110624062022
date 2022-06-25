@@ -1,0 +1,78 @@
+#hvd-sidebar {
+    position: fixed;
+    top: calc(var(--navbar-height) + 4vw);
+    width: 30vw;
+    height: calc(100vh - calc(var(--navbar-height) + 4vw));
+    // margin-top: calc(var(--navbar-height) + 4vw);
+    display: flex;
+    justify-content: end;
+    z-index: 999;
+
+    .slide__scroll {
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        .inner-sidebar {
+            // width: 70%;
+            background-color: #fff;
+            border-radius: 25px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+
+            .siderbar-nav {
+                width: 100%;
+                display: flex;
+
+                .nav-item {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    line-height: 2;
+
+                    a {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        text-decoration: none;
+                        font-size: 1.3vw;
+                        color: var(--font-color);
+                        padding: 5px 15px;
+                        margin-bottom: 10px;
+                        border-radius: 15px;
+
+                        &:hover {
+                            transition: all 0.3s ease;
+                            color: var(--main-color);
+                            background-color: rgba(30, 143, 255, 0.144);
+                        }
+
+                        span {
+                            padding-left: 20px;
+                            flex: 1;
+                        }
+                    }
+                }
+            }
+
+            .sidebar-footer {
+                color: var(--font-color);
+                font-size: 12px;
+                opacity: 0.5;
+                padding: 15px 0;
+                border-bottom: 1px solid #d6dcdf;
+
+                .title {
+                    font-weight: 500;
+                    margin: 5px;
+                }
+
+                .item {
+                    margin: 12px 5px;
+                }
+            }
+        }
+
+    }
+}
