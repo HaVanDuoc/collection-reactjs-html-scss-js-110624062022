@@ -1,24 +1,16 @@
 const autocompleteItems = [
-    {
-        id: 0,
-        name: "Cobol",
-    },
-    {
-        id: 1,
-        name: "JavaScript",
-    },
-    {
-        id: 2,
-        name: "Basic",
-    },
-    {
-        id: 3,
-        name: "PHP",
-    },
-    {
-        id: 4,
-        name: "Java",
-    },
+    "HTML",
+    "HTML 1",
+    "HTML 2",
+    "HTML 3",
+    "CSS",
+    "CSS 1",
+    "CSS 2",
+    "CSS 3",
+    "Javscript",
+    "Javscript 1",
+    "Javscript 2",
+    "Javscript 3",
 ];
 
 export default autocompleteItems;
