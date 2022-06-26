@@ -1,0 +1,9 @@
+#hvd-default-layout {
+    display: flex;
+    flex-direction: row;
+
+    .default-layout__margintop {
+        position: fixed;
+        margin-top: calc(var(--navbar-height) + 4vw);
+    }
+}

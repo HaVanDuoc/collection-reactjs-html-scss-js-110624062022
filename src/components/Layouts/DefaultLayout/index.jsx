@@ -6,9 +6,11 @@ const DefaultLayout = () => {
   return (
     <div id="hvd-default-layout">
       <Navbar />
-      <Sidebar />
-      <Feed />
-      <Rightbar />
+      <div className='default-layout__margintop'>
+        <Sidebar />
+        <Feed />
+        <Rightbar />
+      </div>
     </div>
   );
 };

@@ -7,12 +7,14 @@ import Rightnav from './Rightnav/Rightnav'
 const Navbar = () => {
     return (
         <div id="hvd-navbar">
-            <Logo />
+            {/* <div className="hvd-navbar__display"> */}
+                <Logo />
 
-            <Search />
+                <Search />
 
-            <Rightnav />
-        </div>
+                <Rightnav />
+            </div>
+        // </div>
     );
 };
 

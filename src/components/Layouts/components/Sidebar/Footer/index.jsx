@@ -6,9 +6,9 @@ const Footer = () => {
         <Fragment>
             <div className="sidebar-footer">
                 <div className="title">Liên hệ</div>
-                {contactList.map(item => {
+                {contactList.map((item, index) => {
                     return (
-                        <div className="item">
+                        <div className="item" key={index}>
                             <p className='name'>{item.name}</p>
                             <p className='mail'>{item.mail}</p>
                         </div>
@@ -16,9 +16,9 @@ const Footer = () => {
                 })}
             </div>
             <div className="sidebar-footer">
-                {contactList.map(item => {
+                {contactList.map((item, index) => {
                     return (
-                        <div className="item">
+                        <div className="item" key={index}>
                             <p className='eula'>{item.info}</p>
                         </div>
                     )

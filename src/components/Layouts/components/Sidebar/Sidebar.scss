@@ -1,7 +1,7 @@
 #hvd-sidebar {
-    position: fixed;
-    top: calc(var(--navbar-height) + 4vw);
-    width: 30vw;
+    // position: fixed;
+    // top: calc(var(--navbar-height) + 4vw);
+    width: 300px;
     height: calc(100vh - calc(var(--navbar-height) + 4vw));
     // margin-top: calc(var(--navbar-height) + 4vw);
     display: flex;

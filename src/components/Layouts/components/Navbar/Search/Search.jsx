@@ -94,23 +94,10 @@ const Search = () => {
 
   return (
     <form className='hvd-search'>
-      <i className="fa-solid fa-magnifying-glass icon-search"></i>
-      <input id='hvdInput' type="text" onClick={hanldeClick} placeholder='Tìm kiếm trên Collection' />
-      {/* <div className={active ? "auto-complete active" : "auto-complete"}>
-
-        {autocompleteItems.map((item, index) => {
-          return (
-            <div className="item" key={index}>
-              <i className="fa-solid fa-magnifying-glass"></i>
-              <span className='info'>
-                {item.name}
-              </span>
-              <i className="fa-solid fa-xmark"></i>
-            </div>
-          )
-        })}
-
-      </div> */}
+      <div className='hvd-search__inner'>
+        <i className="fa-solid fa-magnifying-glass icon-search"></i>
+        <input id='hvdInput' type="text" onClick={hanldeClick} placeholder='Tìm kiếm trên Collection' />
+      </div>
     </form >
   )
 }
